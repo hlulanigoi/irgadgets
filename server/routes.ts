@@ -50,13 +50,9 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  // Setup authentication - temporarily disabled
-  try {
-    await setupAuth(app);
-    registerAuthRoutes(app);
-  } catch (error) {
-    console.log("Auth setup skipped:", error.message);
-  }
+  // Setup authentication - skip if REPL_ID not available
+  await setupAuth(app);
+  registerAuthRoutes(app);
 
   // Seed the database
   seedDatabase().catch(console.error);
