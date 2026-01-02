@@ -255,11 +255,11 @@ export default function Home() {
             >
               <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                <span>The Logistics Expert</span>
+                <span>The Gadget Experts</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold">Optimizing your supply chain, one box at a time.</h2>
+              <h2 className="text-4xl md:text-5xl font-bold">Fixing your technology, one gadget at a time.</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Meet the minds behind BOX LOGO. We specialize in component-level logistics and large-scale distribution networks, bridging the gap between physical goods and digital tracking.
+                Meet the minds behind IR Gadgets. We specialize in precision electronics repair, custom software development, and specialized IT solutions, bridging the gap between broken hardware and peak performance.
               </p>
               
               <div className="grid grid-cols-2 gap-6 pt-6">
@@ -267,15 +267,15 @@ export default function Home() {
                   whileHover={{ scale: 1.05 }}
                   className="p-6 rounded-xl bg-card border border-white/5 hover:border-primary/30 transition-colors"
                 >
-                  <h4 className="text-3xl font-bold text-white font-mono">10+</h4>
-                  <p className="text-sm text-muted-foreground">Years Experience</p>
+                  <h4 className="text-3xl font-bold text-white font-mono">15+</h4>
+                  <p className="text-sm text-muted-foreground">Years Combined Experience</p>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   className="p-6 rounded-xl bg-card border border-white/5 hover:border-primary/30 transition-colors"
                 >
-                  <h4 className="text-3xl font-bold text-white font-mono">5k+</h4>
-                  <p className="text-sm text-muted-foreground">Devices Fixed</p>
+                  <h4 className="text-3xl font-bold text-white font-mono">10k+</h4>
+                  <p className="text-sm text-muted-foreground">Repairs Completed</p>
                 </motion.div>
               </div>
 
@@ -285,7 +285,7 @@ export default function Home() {
                     whileHover={{ x: 5 }}
                     className="flex items-center space-x-2 text-primary font-bold hover:text-accent transition-colors group"
                   >
-                    <span>Read Full Profile</span>
+                    <span>Our Full Story</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
                   </motion.button>
                 </Link>
