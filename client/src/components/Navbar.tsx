@@ -1,12 +1,14 @@
 import { Link, useLocation } from "wouter";
-import { Menu, X } from "lucide-react";
+import { Menu, X, LogIn, LogOut, User } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import logoImg from "@assets/download_1767349752039.png";
+import { useAuth } from "@/hooks/use-auth";
 
 export function Navbar() {
   const [location] = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const { user, isAuthenticated } = useAuth();
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -46,11 +48,29 @@ export function Navbar() {
                 )}
               </Link>
             ))}
-            <Link href="/contact">
-              <button className="px-6 py-2 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-all duration-300">
-                Get Support
-              </button>
-            </Link>
+            
+            <div className="flex items-center space-x-4">
+              {isAuthenticated ? (
+                <div className="flex items-center space-x-4">
+                  <div className="flex items-center space-x-2 text-sm font-medium text-muted-foreground">
+                    <User className="h-4 w-4" />
+                    <span>{user?.firstName || 'Account'}</span>
+                  </div>
+                  <a href="/api/logout">
+                    <button className="px-4 py-2 rounded-lg border border-white/10 text-sm font-semibold hover:bg-white/5 transition-all">
+                      <LogOut className="h-4 w-4" />
+                    </button>
+                  </a>
+                </div>
+              ) : (
+                <a href="/api/login">
+                  <button className="px-6 py-2 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-all flex items-center space-x-2">
+                    <LogIn className="h-4 w-4" />
+                    <span>Login</span>
+                  </button>
+                </a>
+              )}
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
