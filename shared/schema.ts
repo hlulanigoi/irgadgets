@@ -1,10 +1,10 @@
-import { pgTable, text, serial, integer, boolean } from "drizzle-orm/pg-core";
+import { sqliteTable, text, integer } from "drizzle-orm/sqlite-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 export * from "./models/auth";
 
-export const products = pgTable("products", {
-  id: serial("id").primaryKey(),
+export const products = sqliteTable("products", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
   name: text("name").notNull(),
   description: text("description").notNull(),
   price: text("price").notNull(),
@@ -12,8 +12,8 @@ export const products = pgTable("products", {
   imageUrl: text("image_url").notNull(),
 });
 
-export const inquiries = pgTable("inquiries", {
-  id: serial("id").primaryKey(),
+export const inquiries = sqliteTable("inquiries", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
   name: text("name").notNull(),
   email: text("email").notNull(),
   message: text("message").notNull(),
