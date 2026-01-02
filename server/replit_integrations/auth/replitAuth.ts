@@ -61,6 +61,12 @@ async function upsertUser(claims: any) {
 }
 
 export async function setupAuth(app: Express) {
+  // Skip auth setup if REPL_ID is not set
+  if (!process.env.REPL_ID) {
+    console.log("Skipping auth setup - REPL_ID not configured");
+    return;
+  }
+
   app.set("trust proxy", 1);
   app.use(getSession());
   app.use(passport.initialize());
