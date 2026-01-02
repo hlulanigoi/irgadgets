@@ -86,15 +86,32 @@ app.use((req, res, next) => {
 });
 
 (async () => {
+  // Health check endpoint
+  app.get("/health", (req, res) => {
+    res.status(200).json({
+      status: "healthy",
+      timestamp: new Date().toISOString(),
+      uptime: process.uptime(),
+      environment: process.env.NODE_ENV,
+    });
+  });
+
+  app.get("/api/health", (req, res) => {
+    res.status(200).json({
+      status: "healthy",
+      timestamp: new Date().toISOString(),
+      uptime: process.uptime(),
+      environment: process.env.NODE_ENV,
+    });
+  });
+
   await registerRoutes(httpServer, app);
 
-  app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
-    const status = err.status || err.statusCode || 500;
-    const message = err.message || "Internal Server Error";
-
-    res.status(status).json({ message });
-    throw err;
-  });
+  // Error handling middleware (must be after all routes)
+  app.use(errorHandler);
+  
+  // 404 handler for undefined routes (must be last)
+  app.use(notFoundHandler);
 
   // importantly only setup vite in development and after
   // setting up all the other routes so the catch-all route
@@ -118,7 +135,9 @@ app.use((req, res, next) => {
       reusePort: true,
     },
     () => {
-      log(`serving on port ${port}`);
+      logger.info(`🚀 Server running on port ${port}`);
+      logger.info(`📊 Environment: ${process.env.NODE_ENV || "development"}`);
+      logger.info(`🔗 Health check: http://localhost:${port}/health`);
     },
   );
 })();
