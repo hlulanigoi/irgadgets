@@ -58,7 +58,7 @@ Preferred communication style: Simple, everyday language.
 
 ### Git & GitHub
 - **Username**: hlulanigoi
-- **Remote**: https://github.com/hlulanigoi/tech-solutions.git
+- **Remote**: https://github.com/hlulanigoi/irgadgets.git
 - **Management**: Git operations are managed manually via terminal by the user.
 
 ### Database
