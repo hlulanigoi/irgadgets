@@ -6,6 +6,18 @@ A modern, production-ready full-stack tech services website built with Express, 
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Node](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen)
 
+---
+
+## 🚀 **New Here? [START HERE →](./START_HERE.md)**
+
+**Choose your path:**
+- 🆕 [Just want to see it working](./START_HERE.md#new-user---just-want-to-see-it-working) (5 min)
+- 🚀 [Deploy to production](./START_HERE.md#ready-to-deploy-to-production) (15 min)
+- 💻 [Contribute to the project](./START_HERE.md#developer---want-to-contribute)
+- 📚 [Read API docs](./API_DOCUMENTATION.md)
+
+---
+
 ## 🌟 Features
 
 - **Service Catalog**: Browse computer repair, web development, mobile apps, and IT services
