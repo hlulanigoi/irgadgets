@@ -1,0 +1,33 @@
+untu@instance-20260101-1750:~/irgadgets$ npm install
+npm WARN read-shrinkwrap This version of npm is compatible with lockfileVersion@1, but package-lock.json was generated for lockfileVersion@3. I'll try to do my best with it!
+npm WARN deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+npm WARN deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+npm WARN notsup Unsupported engine for better-sqlite3@12.5.0: wanted: {"node":"20.x || 22.x || 23.x || 24.x || 25.x"} (current: {"node":"10.19.0","npm":"6.14.4"})
+npm WARN notsup Not compatible with your version of node/npm: better-sqlite3@12.5.0
+npm WARN notsup Unsupported engine for connect-pg-simple@10.0.0: wanted: {"node":"^18.18.0 || ^20.9.0 || >=22.0.0"} (current: {"node":"10.19.0","npm":"6.14.4"})
+npm WARN notsup Not compatible with your version of node/npm: connect-pg-simple@10.0.0
+npm WARN notsup Unsupported engine for dotenv@17.2.3: wanted: {"node":">=12"} (current: {"node":"10.19.0","npm":"6.14.4"})
+npm WARN notsup Not compatible with your version of node/npm: dotenv@17.2.3
+npm WARN notsup Unsupported engine for express-rate-limit@8.2.1: wanted: {"node":">= 16"} (current: {"node":"10.19.0","npm":"6.14.4"})
+npm WARN notsup Not compatible with your version of node/npm: express-rate-limit@8.2.1
+npm WARN notsup Unsupported engine for helmet@8.1.0: wanted: {"node":">=18.0.0"} (current: {"node":"10.19.0","npm":"6.14.4"})
+npm WARN notsup Not compatible with your version of node/npm: helmet@8.1.0
+npm WARN notsup Unsupported engine for postgres@3.4.7: wanted: {"node":">=12"} (current: {"node":"10.19.0","npm":"6.14.4"})
+npm WARN notsup Not compatible with your version of node/npm: postgres@3.4.7
+npm WARN notsup Unsupported engine for pg@8.16.3: wanted: {"node":">= 16.0.0"} (current: {"node":"10.19.0","npm":"6.14.4"})
+npm WARN notsup Not compatible with your version of node/npm: pg@8.16.3
+npm WARN notsup Unsupported engine for react-hook-form@7.69.0: wanted: {"node":">=18.0.0"} (current: {"node":"10.19.0","npm":"6.14.4"})
+npm WARN notsup Not compatible with your version of node/npm: react-hook-form@7.69.0
+npm WARN notsup Unsupported engine for recharts@2.15.4: wanted: {"node":">=14"} (current: {"node":"10.19.0","npm":"6.14.4"})
+npm WARN notsup Not compatible with your version of node/npm: recharts@2.15.4
+npm WARN notsup Unsupported engine for winston@3.19.0: wanted: {"node":">= 12.0.0"} (current: {"node":"10.19.0","npm":"6.14.4"})
+npm WARN notsup Not compatible with your version of node/npm: winston@3.19.0
+npm WARN notsup Unsupported engine for zod-validation-error@3.5.4: wanted: {"node":">=18.0.0"} (current: {"node":"10.19.0","npm":"6.14.4"})
+npm WARN notsup Not compatible with your version of node/npm: zod-validation-error@3.5.4
+npm WARN notsup Unsupported engine for ip-address@10.0.1: wanted: {"node":">= 12"} (current: {"node":"10.19.0","npm":"6.14.4"})
+npm WARN notsup Not compatible with your version of node/npm: ip-address@10.0.1
+
+npm ERR! Unexpected end of JSON input while parsing near '...PdQV0Oz3DxZ8iHOIv6jNL'
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/ubuntu/.npm/_logs/2026-01-02T12_59_05_308Z-debug.log
