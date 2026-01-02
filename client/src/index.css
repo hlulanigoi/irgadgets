@@ -5,38 +5,35 @@
 @tailwind utilities;
 
 :root {
-  /* Tech/Cyber Aesthetic Palette */
   --font-sans: 'Inter', sans-serif;
-  --font-display: 'Orbitron', sans-serif;
-  --font-tech: 'Rajdhani', sans-serif;
 
-  /* Deep Space Blue Background */
-  --background: 222 47% 11%;
+  /* Box Brand Palette */
+  /* Dark Blue: #1A2B4A -> 218 47% 20% */
+  --background: 218 47% 20%;
   --foreground: 210 40% 98%;
 
-  /* Cyan/Electric Blue Accents */
-  --primary: 190 100% 50%; /* Electric Cyan */
-  --primary-foreground: 222 47% 11%;
+  /* Primary Orange: #FF6B35 -> 16 100% 60% */
+  --primary: 16 100% 60%;
+  --primary-foreground: 0 0% 100%;
 
-  /* Secondary Dark Blue */
-  --secondary: 217 33% 17%;
+  /* Teal Accent: #00B4B4 -> 180 100% 35% */
+  --accent: 180 100% 35%;
+  --accent-foreground: 210 40% 98%;
+
+  /* Secondary: Slightly lighter Blue */
+  --secondary: 218 47% 25%;
   --secondary-foreground: 210 40% 98%;
 
-  /* Muted Text */
-  --muted: 217 33% 20%;
-  --muted-foreground: 215 20% 65%;
-
-  /* Purple/Pink Accent for gradients */
-  --accent: 280 80% 60%;
-  --accent-foreground: 210 40% 98%;
+  /* Muted */
+  --muted: 218 47% 30%;
+  --muted-foreground: 215 20% 75%;
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
 
-  /* Borders */
-  --border: 217 33% 25%;
-  --input: 217 33% 25%;
-  --ring: 190 100% 50%;
+  --border: 218 47% 35%;
+  --input: 218 47% 35%;
+  --ring: 16 100% 60%;
 
   --radius: 0.5rem;
 }
@@ -45,30 +42,14 @@
   body {
     @apply bg-background text-foreground antialiased selection:bg-primary/30 selection:text-primary-foreground;
     font-family: var(--font-sans);
-    background-image: 
-      radial-gradient(circle at 50% 0%, hsl(222 47% 15%) 0%, transparent 70%),
-      linear-gradient(to bottom, transparent, hsl(222 47% 11%));
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
-    @apply tracking-wide uppercase;
-  }
-
-  .font-tech {
-    font-family: var(--font-tech);
+    @apply font-bold tracking-tight;
   }
 }
 
 @layer utilities {
-  .text-glow {
-    text-shadow: 0 0 10px hsla(190, 100%, 50%, 0.5);
-  }
-  
-  .border-glow {
-    box-shadow: 0 0 10px hsla(190, 100%, 50%, 0.2);
-  }
-
   .bg-grid-pattern {
     background-image: 
       linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),

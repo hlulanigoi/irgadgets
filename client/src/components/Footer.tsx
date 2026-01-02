@@ -1,20 +1,21 @@
-import { CircuitBoard, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { Link } from "wouter";
+import logoImg from "@assets/download_1767349752039.png";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-black/40 pt-16 pb-8">
+    <footer className="border-t border-white/10 bg-black/20 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <CircuitBoard className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold tracking-tighter text-foreground">
-                IRGADGETS
+            <div className="flex items-center space-x-3">
+              <img src={logoImg} alt="Box Logo" className="h-8 w-8 object-contain" />
+              <span className="text-xl font-bold tracking-tight text-foreground">
+                BOX LOGO
               </span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Empowering your digital existence. Expert diagnostics, software solutions, and hardware mastery for the modern age.
+              Moving your digital assets with precision. Expert logistics, secure storage, and technical mastery for the modern enterprise.
             </p>
           </div>
 

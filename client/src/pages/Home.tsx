@@ -24,28 +24,28 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="text-primary font-tech tracking-widest text-sm md:text-base mb-4 uppercase">
-              System Status: Online
+            <h2 className="text-accent font-medium tracking-widest text-sm md:text-base mb-4 uppercase">
+              Operational Status: Efficient
             </h2>
-            <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold tracking-tighter leading-none mb-6">
-              DIGITAL <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-300 to-accent text-glow">
-                MASTERY
+            <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold tracking-tight leading-none mb-6">
+              SECURE <br />
+              <span className="text-primary">
+                DELIVERY
               </span>
             </h1>
             <p className="text-lg md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-              We fix, build, and optimize your digital world. From complex hardware repair to scalable SaaS deployment.
+              Precision logistics meets digital excellence. We provide the infrastructure and expertise to move your business forward.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/products">
-                <button className="px-8 py-4 rounded-full bg-primary text-primary-foreground font-bold text-lg hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] hover:scale-105 transition-all duration-300 w-full sm:w-auto">
+                <button className="px-8 py-4 rounded-lg bg-primary text-primary-foreground font-bold text-lg hover:opacity-90 hover:scale-105 transition-all duration-300 w-full sm:w-auto">
                   Explore Solutions
                 </button>
               </Link>
               <Link href="/contact">
-                <button className="px-8 py-4 rounded-full bg-transparent border border-white/20 text-white font-bold text-lg hover:bg-white/10 transition-all duration-300 w-full sm:w-auto">
-                  Get Support
+                <button className="px-8 py-4 rounded-lg bg-transparent border border-white/20 text-white font-bold text-lg hover:bg-white/10 transition-all duration-300 w-full sm:w-auto">
+                  Get Started
                 </button>
               </Link>
             </div>
@@ -59,7 +59,7 @@ export default function Home() {
           transition={{ repeat: Infinity, duration: 2 }}
         >
           <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center p-2">
-            <div className="w-1 h-1 bg-primary rounded-full" />
+            <div className="w-1 h-1 bg-accent rounded-full" />
           </div>
         </motion.div>
       </section>
@@ -69,20 +69,20 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: Cpu, title: "Hardware Repair", desc: "Expert component level diagnostics and repair." },
-              { icon: Globe, title: "Web Solutions", desc: "Scalable web apps and maintenance services." },
-              { icon: ShieldCheck, title: "Cyber Security", desc: "Protecting your digital assets from threats." },
-              { icon: Wrench, title: "Tech Support", desc: "24/7 assistance for critical systems." },
+              { icon: Cpu, title: "Precision Logistics", desc: "Advanced component tracking and supply chain management." },
+              { icon: Globe, title: "Global Distribution", desc: "Reliable international shipping and storage solutions." },
+              { icon: ShieldCheck, title: "Secure Storage", desc: "State-of-the-art warehousing for your valuable assets." },
+              { icon: Wrench, title: "Technical Support", desc: "On-site maintenance for logistics hardware." },
             ].map((feature, i) => (
-              <motion.div
+                <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="group p-6 rounded-2xl bg-card border border-white/5 hover:border-primary/50 hover:bg-white/5 transition-all duration-300"
+                className="group p-6 rounded-xl bg-card border border-white/5 hover:border-primary/50 hover:bg-white/5 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors text-primary">
+                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent group-hover:text-accent-foreground transition-colors text-accent">
                   <feature.icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
@@ -98,23 +98,22 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-3xl blur-2xl opacity-30" />
-              {/* unsplash photo of a tech specialist working on servers */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-3xl blur-2xl opacity-20" />
               <img 
-                src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&q=80" 
-                alt="Tech Specialist"
+                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80" 
+                alt="Logistics Specialist"
                 className="relative rounded-3xl border border-white/10 shadow-2xl"
               />
             </div>
             
             <div className="space-y-6">
               <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
-                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                <span>The Specialist</span>
+                <span className="w-2 h-2 rounded-full bg-primary" />
+                <span>The Logistics Expert</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold">Fixing your digital world, one byte at a time.</h2>
+              <h2 className="text-4xl md:text-5xl font-bold">Optimizing your supply chain, one box at a time.</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Meet the mind behind IrGadgets. With over a decade of experience in everything from soldering motherboards to deploying cloud infrastructure, our lead technician bridges the gap between hardware and software.
+                Meet the minds behind BOX LOGO. We specialize in component-level logistics and large-scale distribution networks, bridging the gap between physical goods and digital tracking.
               </p>
               
               <div className="grid grid-cols-2 gap-6 pt-6">
@@ -163,7 +162,7 @@ export default function Home() {
                 <Link key={product.id} href={`/products/${product.id}`}>
                   <motion.div 
                     whileHover={{ y: -5 }}
-                    className="group rounded-2xl overflow-hidden bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 cursor-pointer h-full flex flex-col"
+                    className="group rounded-xl overflow-hidden bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 cursor-pointer h-full flex flex-col"
                   >
                     <div className="aspect-video bg-black/50 relative overflow-hidden">
                       <img 
@@ -173,7 +172,7 @@ export default function Home() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80" />
                       <div className="absolute bottom-4 left-4">
-                        <span className="px-2 py-1 rounded bg-primary text-primary-foreground text-xs font-bold uppercase">
+                        <span className="px-2 py-1 rounded bg-accent text-accent-foreground text-xs font-bold uppercase">
                           {product.category}
                         </span>
                       </div>

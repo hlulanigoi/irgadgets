@@ -1,7 +1,8 @@
 import { Link, useLocation } from "wouter";
-import { CircuitBoard, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoImg from "@assets/download_1767349752039.png";
 
 export function Navbar() {
   const [location] = useLocation();
@@ -10,7 +11,7 @@ export function Navbar() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/products", label: "Solutions" },
-    { href: "/about", label: "The Tech Guy" },
+    { href: "/about", label: "About Us" },
     { href: "/contact", label: "Contact" },
   ];
 
@@ -19,12 +20,10 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group cursor-pointer">
-            <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
-              <CircuitBoard className="h-8 w-8 text-primary animate-pulse" />
-            </div>
-            <span className="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
-              IRGADGETS
+          <Link href="/" className="flex items-center space-x-3 group cursor-pointer">
+            <img src={logoImg} alt="Box Logo" className="h-10 w-10 object-contain" />
+            <span className="text-2xl font-bold tracking-tight text-foreground">
+              BOX LOGO
             </span>
           </Link>
 
@@ -34,7 +33,7 @@ export function Navbar() {
               <Link 
                 key={link.href} 
                 href={link.href}
-                className={`relative text-sm font-medium tracking-wide transition-colors hover:text-primary ${
+                className={`relative text-sm font-medium transition-colors hover:text-primary ${
                   location === link.href ? "text-primary" : "text-muted-foreground"
                 }`}
               >
@@ -42,13 +41,13 @@ export function Navbar() {
                 {location === link.href && (
                   <motion.div
                     layoutId="navbar-underline"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary shadow-[0_0_10px_var(--primary)]"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary"
                   />
                 )}
               </Link>
             ))}
             <Link href="/contact">
-              <button className="px-6 py-2 rounded-full bg-primary/10 border border-primary/50 text-primary font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)]">
+              <button className="px-6 py-2 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-all duration-300">
                 Get Support
               </button>
             </Link>
