@@ -11,7 +11,7 @@ async function seedDatabase() {
     await storage.createProduct({
       name: "Computer Repair & Diagnostics",
       description: "Comprehensive hardware and software troubleshooting for desktops and laptops. We fix crashes, slow performance, and hardware failures.",
-      price: "Starts at $50",
+      price: "Starts at R950",
       category: "service",
       imageUrl: "https://images.unsplash.com/photo-1597872252721-240bcdd23f96?auto=format&fit=crop&q=80"
     });
@@ -32,14 +32,14 @@ async function seedDatabase() {
     await storage.createProduct({
       name: "SaaS Platform Subscription",
       description: "Access our suite of productivity tools designed to streamline your business operations.",
-      price: "$29/month",
+      price: "R550/month",
       category: "saas",
       imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80"
     });
     await storage.createProduct({
       name: "IT Maintenance Package",
       description: "Ongoing support and maintenance for your business infrastructure. Includes regular updates and security checks.",
-      price: "$199/month",
+      price: "R3800/month",
       category: "maintenance",
       imageUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80"
     });
