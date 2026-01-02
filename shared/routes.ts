@@ -1,6 +1,10 @@
 import { z } from 'zod';
 import { insertInquirySchema, insertProductSchema, products, inquiries } from './schema';
 
+// Export types for use in frontend
+export type InsertInquiry = z.infer<typeof insertInquirySchema>;
+export type InsertProduct = z.infer<typeof insertProductSchema>;
+
 export const errorSchemas = {
   validation: z.object({
     message: z.string(),
