@@ -56,6 +56,11 @@ Preferred communication style: Simple, everyday language.
 
 ## External Dependencies
 
+### Git & GitHub
+- **Username**: hlulanigoi
+- **Remote**: https://github.com/hlulanigoi/tech-solutions.git
+- **Management**: Git operations are managed manually via terminal by the user.
+
 ### Database
 - **PostgreSQL**: Primary database (connection via `DATABASE_URL` environment variable)
 - **Drizzle ORM**: Type-safe database queries and migrations
