@@ -9,13 +9,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img src={logoImg} alt="Box Logo" className="h-8 w-8 object-contain" />
+              <img src={logoImg} alt="Tech Solutions Logo" className="h-8 w-8 object-contain" />
               <span className="text-xl font-bold tracking-tight text-foreground">
-                BOX LOGO
+                TECH SOLUTIONS
               </span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Moving your digital assets with precision. Expert logistics, secure storage, and technical mastery for the modern enterprise.
+              Tech solutions made simple. We streamline your digital experience, providing expert guidance and intuitive tools to help you find exactly what you're looking for.
             </p>
           </div>
 

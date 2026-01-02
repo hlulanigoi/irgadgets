@@ -21,9 +21,9 @@ export function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group cursor-pointer">
-            <img src={logoImg} alt="Box Logo" className="h-10 w-10 object-contain" />
+            <img src={logoImg} alt="Tech Solutions Logo" className="h-10 w-10 object-contain" />
             <span className="text-2xl font-bold tracking-tight text-foreground">
-              BOX LOGO
+              TECH SOLUTIONS
             </span>
           </Link>
 

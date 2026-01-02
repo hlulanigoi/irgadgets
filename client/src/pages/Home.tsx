@@ -28,13 +28,13 @@ export default function Home() {
               Operational Status: Efficient
             </h2>
             <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold tracking-tight leading-none mb-6">
-              SECURE <br />
+              TECH <br />
               <span className="text-primary">
-                DELIVERY
+                SOLUTIONS
               </span>
             </h1>
             <p className="text-lg md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-              Precision logistics meets digital excellence. We provide the infrastructure and expertise to move your business forward.
+              Making complex technology simple for everyone. We provide the tools and expertise to help you find exactly what you need, when you need it.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
