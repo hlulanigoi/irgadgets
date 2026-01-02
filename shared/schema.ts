@@ -1,14 +1,11 @@
-import { pgTable, serial, text, timestamp, integer as pgInteger } from "drizzle-orm/pg-core";
-import { sqliteTable, text as sqliteText, integer } from "drizzle-orm/sqlite-core";
+import { pgTable, serial, text, timestamp } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 export * from "./models/auth";
 
-// Determine which dialect to use based on DATABASE_URL
-const isPostgres = process.env.DATABASE_URL && !process.env.DATABASE_URL.includes("sqlite");
-
-// PostgreSQL tables (production)
-export const productsPostgres = pgTable("products", {
+// PostgreSQL tables (production-ready schema)
+// Note: SQLite will be used in development only as a fallback with compatible schema
+export const products = pgTable("products", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
   description: text("description").notNull(),
@@ -18,7 +15,7 @@ export const productsPostgres = pgTable("products", {
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
-export const inquiriesPostgres = pgTable("inquiries", {
+export const inquiries = pgTable("inquiries", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
   email: text("email").notNull(),
@@ -26,28 +23,6 @@ export const inquiriesPostgres = pgTable("inquiries", {
   serviceOfInterest: text("service_of_interest"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
-
-// SQLite tables (development fallback)
-export const productsSqlite = sqliteTable("products", {
-  id: integer("id").primaryKey({ autoIncrement: true }),
-  name: sqliteText("name").notNull(),
-  description: sqliteText("description").notNull(),
-  price: sqliteText("price").notNull(),
-  category: sqliteText("category").notNull(),
-  imageUrl: sqliteText("image_url").notNull(),
-});
-
-export const inquiriesSqlite = sqliteTable("inquiries", {
-  id: integer("id").primaryKey({ autoIncrement: true }),
-  name: sqliteText("name").notNull(),
-  email: sqliteText("email").notNull(),
-  message: sqliteText("message").notNull(),
-  serviceOfInterest: sqliteText("service_of_interest"),
-});
-
-// Export the appropriate tables based on environment
-export const products = isPostgres ? productsPostgres : productsSqlite;
-export const inquiries = isPostgres ? inquiriesPostgres : inquiriesSqlite;
 
 export const insertProductSchema = createInsertSchema(products).omit({ id: true });
 export const insertInquirySchema = createInsertSchema(inquiries).omit({ id: true });
