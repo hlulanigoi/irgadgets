@@ -2,6 +2,15 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
+import compression from "compression";
+import { setupSecurityMiddleware } from "./middleware/security";
+import { requestLogger, logger } from "./middleware/logger";
+import { errorHandler, notFoundHandler } from "./middleware/errorHandler";
+import dotenv from "dotenv";
+import fs from "fs";
+
+// Load environment variables
+dotenv.config();
 
 const app = express();
 const httpServer = createServer(app);
@@ -11,6 +20,23 @@ declare module "http" {
     rawBody: unknown;
   }
 }
+
+// Create logs directory if it doesn't exist
+if (!fs.existsSync("logs")) {
+  fs.mkdirSync("logs");
+}
+
+// Trust proxy (important for rate limiting and getting correct IPs behind proxies)
+app.set("trust proxy", 1);
+
+// Compression middleware
+app.use(compression());
+
+// Security middleware (helmet, cors, rate limiting)
+setupSecurityMiddleware(app);
+
+// Request logging
+app.use(requestLogger);
 
 app.use(
   express.json({
